@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaHome, FaUser, FaCog, FaComment, FaBook } from "react-icons/fa";
+import { FaHome, FaUser, FaCog, FaComment, FaBook, FaEnvelope } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -43,7 +43,7 @@ export default function Sidebar() {
             label="Chat"
             isHovered={isHovered}
             isActive={isActive("/chats")}
-            href="/profile"
+            href="/chats"
           />
           <SidebarItem
             icon={<FaUser />}
@@ -58,6 +58,20 @@ export default function Sidebar() {
             isHovered={isHovered}
             isActive={isActive("/settings")}
             href="/settings"
+          />
+          <SidebarItem
+            icon={<FaBook />}
+            label="Issues"
+            isHovered={isHovered}
+            isActive={isActive("/issues")}
+            href="/issues"
+          />
+          <SidebarItem
+            icon={<FaEnvelope />}
+            label="Contact"
+            isHovered={isHovered}
+            isActive={isActive("/contact")}
+            href="/contact"
           />
         </div>
       </div>
